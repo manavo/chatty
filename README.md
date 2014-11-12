@@ -14,6 +14,13 @@ Install via Composer
 composer require manavo/chatty
 ```
 
+## Services
+
+Supported services at the moment are:
+
+* Slack
+* HipChat
+
 ## Usage
 
 ### Slack
