@@ -56,4 +56,7 @@ class MyHandler implements \Manavo\Chatty\Interfaces\MessageHandlerInterface {
 	}
 
 }
+
+$chatty = new \Manavo\Chatty\Sender(new MyHandler());
+$chatty->send($message);
 ```
