@@ -1,6 +1,8 @@
 # Chatty
 
-A library to notify you of important events that happen in your project
+A library to send messages to different group chat services (Slack, HipChat).
+
+It can easily be used to send notifications about what's happening in your app (user signed up, etc)
 
 ## Authors
 
