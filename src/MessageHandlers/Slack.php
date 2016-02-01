@@ -8,6 +8,7 @@ class Slack implements MessageHandlerInterface
     protected $url = null;
     protected $username = 'Chatty';
     protected $icon = '';
+    protected $attachments = [];
 
     public function __construct($options)
     {
@@ -23,6 +24,9 @@ class Slack implements MessageHandlerInterface
         if (!empty($options['icon'])) {
             $this->icon = $options['icon'];
         }
+        if (!empty($options['attachments'])) {
+            $this->attachments = $options['attachments'];
+        }
     }
 
     public function handle($message)
@@ -35,6 +39,7 @@ class Slack implements MessageHandlerInterface
                     'text'     => $message,
                     'username' => $this->username,
                     'icon_url' => $this->icon,
+                    'attachments' => $this->attachments,
                 ])
             ]);
         } catch (\Exception $e) {
